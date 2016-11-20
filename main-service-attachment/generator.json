@@ -1,0 +1,18 @@
+{
+	"baseName": "mainappattachment",
+	"packageName": "com.myexperiments.mainappattachment",
+	"entities": [],
+	"resources": [
+		{
+			"name": "Attachment",
+			"methods": [
+				{
+					"methodName": "uploadAttachment",
+					"methodType": "POST",
+					"methodPath": "upload",
+					"formParams": []
+				}
+			]
+		}
+	]
+}

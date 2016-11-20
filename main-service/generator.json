@@ -1,0 +1,18 @@
+{
+	"baseName": "mainapp",
+	"packageName": "com.myexperiments.mainapp",
+	"entities": [],
+	"resources": [
+		{
+			"name": "UserResource",
+			"methods": [
+				{
+					"methodName": "getUser",
+					"methodType": "GET",
+					"methodPath": "/users",
+					"formParams": []
+				}
+			]
+		}
+	]
+}
