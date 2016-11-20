@@ -1,5 +1,7 @@
 package com.myexperiments.mainappattachment.resources;
 
+import com.codahale.metrics.annotation.Timed;
+import io.dropwizard.hibernate.UnitOfWork;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -18,10 +20,12 @@ import java.io.InputStream;
 @Path("/attachment")
 public class AttachmentResource {
 
-    @Path("upload")
+    @Path("/upload")
     @POST
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
+    @UnitOfWork
+    @Timed
     public Response uploadAttachment(@FormDataParam("file") final InputStream uploadedInputStream,
                                      @FormDataParam("file") final FormDataContentDisposition fileDetail,
                                      @FormDataParam("model") final String entityJson) {
