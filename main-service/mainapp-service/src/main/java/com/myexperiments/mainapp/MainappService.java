@@ -53,6 +53,7 @@ public class MainappService extends Application<MainappConfiguration> {
 
 
         environment.jersey().register(new UserResource());
+        environment.jersey().register(new CalculationResource());
 
     }
 }
